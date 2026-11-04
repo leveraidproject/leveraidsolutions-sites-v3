@@ -1,0 +1,206 @@
+:root {
+  --navy: #0c1b3a;
+  --title: #0f3a63;
+  --blue: #1a6fa3;
+  --teal: #17a2b8;
+  --teal-dark: #14566b;
+  --btn-teal: #0a4a5c;
+  --btn-teal-border: #2b93a8;
+  --gold: #f5b301;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --footer: #020626;
+  --link-blue: #1a5ff0;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+}
+h1, h2, h3, h4, .nav a, .hm-btn, footer h4, footer li { font-family: "Montserrat", "Roboto", sans-serif; }
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Header ---------- */
+header { position: sticky; top: 0; z-index: 50; background: var(--white); }
+.nav { display: flex; align-items: center; justify-content: space-between; height: 88px; padding: 0 28px 0 36px; }
+.nav .logo img { height: 56px; width: auto; }
+.nav ul { list-style: none; display: flex; gap: 42px; }
+.nav ul a { font-weight: 400; font-size: 1.05rem; color: #222; }
+.nav ul a:hover, .nav ul a.active { color: var(--blue); }
+
+/* ---------- Pills / buttons ---------- */
+.pill { display: inline-block; background: var(--navy); color: #fff; border-radius: 50px; padding: 10px 26px; font-family: "Montserrat", sans-serif; font-weight: 700; font-size: .85rem; transition: .2s; }
+.pill:hover { background: var(--blue); }
+.pill-outline { background: transparent; border: 2px solid #fff; }
+.pill-outline:hover { background: #fff; color: var(--navy); }
+
+/* ---------- Home: hero ---------- */
+.hm-hero { background: linear-gradient(180deg, #0a1630 0%, #13294f 100%); color: #fff; text-align: center; padding: 76px 0 84px; }
+.hm-hero h1 { font-size: 2.9rem; font-weight: 600; line-height: 1.25; }
+.hm-hero p { font-size: 1.4rem; margin: 16px 0 44px; }
+.hm-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 980px; margin: 0 auto; padding: 0 24px; }
+.hm-btn { display: block; background: var(--btn-teal); border: 3px solid var(--btn-teal-border); color: #fff; border-radius: 60px; padding: 18px 10px; font-size: 1.6rem; font-weight: 700; text-transform: uppercase; transition: .2s; }
+.hm-btn:hover { background: #0e6178; }
+
+/* ---------- Split (image + text), reused on several pages ---------- */
+.hm-split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; background: #fff; }
+.hm-split img { width: 100%; height: 100%; min-height: 360px; object-fit: cover; }
+.hm-split .txt { padding: 40px 7vw 40px 48px; max-width: 700px; }
+.hm-split h2 { font-size: 2.1rem; color: var(--title); margin-bottom: 14px; line-height: 1.25; }
+.hm-split p { font-size: .92rem; margin-bottom: 20px; }
+
+/* ---------- Home: how we work ---------- */
+.hm-how { text-align: center; padding: 90px 0 60px; }
+.hm-how h2 { font-size: 3rem; color: var(--title); font-weight: 700; }
+.hm-how .sub { font-size: 1.55rem; max-width: 900px; margin: 18px auto 56px; line-height: 1.5; color: #1f2937; }
+.hm-icons { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.hm-icons img { height: 110px; margin: 0 auto 14px; object-fit: contain; }
+.hm-icons h3 { color: var(--blue); font-size: 1.2rem; margin-bottom: 6px; }
+.hm-icons p { font-size: .92rem; color: var(--muted); max-width: 300px; margin: 0 auto; }
+
+/* ---------- Home: services cards ---------- */
+.hm-services { padding: 30px 0 80px; }
+.hm-services h2 { text-align: center; font-size: 1.45rem; color: var(--title); }
+.hm-services .sub { text-align: center; font-size: .9rem; margin-bottom: 24px; }
+.hm-cards { display: grid; grid-template-columns: repeat(6, 1fr); gap: 22px; max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+.hm-card { grid-column: span 2; background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,.12); display: flex; flex-direction: column; text-align: center; }
+.hm-card.wide { grid-column: span 3; }
+.hm-card img { width: 100%; height: 210px; object-fit: cover; }
+.hm-card.wide img { height: 330px; }
+.hm-card .body { padding: 18px 20px 24px; display: flex; flex-direction: column; align-items: center; flex: 1; }
+.hm-card h3 { color: var(--blue); font-size: 1.05rem; margin-bottom: 8px; }
+.hm-card p { font-size: .82rem; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+.hm-card .pill { margin-top: auto; }
+
+/* ---------- CTA band ---------- */
+.hm-cta { background: linear-gradient(180deg, #1c2b47 0%, #0f1a30 100%); color: #fff; }
+.hm-cta .hm-split { background: transparent; }
+.hm-cta .txt { padding-left: 20px; }
+.hm-cta h2 { color: #fff; font-size: 2rem; }
+.hm-cta p { font-size: .92rem; margin-bottom: 20px; }
+
+/* ---------- Home: testimonials ---------- */
+.hm-testi { text-align: center; padding: 70px 0 50px; }
+.hm-testi .eyebrow { letter-spacing: 2px; text-transform: uppercase; font-size: .95rem; color: #1f2937; }
+.hm-testi h2 { font-size: 2.7rem; color: var(--title); font-weight: 700; margin-bottom: 40px; }
+.hm-quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.hm-quotes h4 { font-size: 1.5rem; color: var(--title); line-height: 1.25; margin-bottom: 12px; }
+.hm-quotes p { font-size: .85rem; font-style: italic; color: #1f2937; }
+.hm-quotes .who { font-style: normal; font-weight: 700; margin-top: 8px; }
+.stars { color: var(--gold); letter-spacing: 3px; margin-top: 8px; }
+.hm-band { height: 56px; background: linear-gradient(180deg, #ffffff 0%, var(--navy) 100%); }
+
+/* ---------- FAQ (all pages) ---------- */
+.hm-faq { padding: 60px 0 80px; text-align: center; }
+.hm-faq h2 { font-size: 3.2rem; color: #111; font-weight: 700; line-height: 1.2; }
+.hm-faq .sub { font-size: 1.9rem; font-weight: 400; max-width: 900px; margin: 14px auto 44px; line-height: 1.35; }
+.hm-qa { display: grid; grid-template-columns: 1fr 1fr; gap: 0 40px; text-align: left; padding: 0 20px; }
+.hm-qa h3 { color: #14485c; font-size: 1.4rem; font-weight: 400; margin: 16px 0 8px; line-height: 1.3; }
+.hm-qa p { font-size: .88rem; color: #444; line-height: 1.45; }
+
+/* ---------- Sub-page hero banner (Services, Contact) ---------- */
+.sub-hero { background: linear-gradient(180deg, #2c3d55 0%, #1f2f46 100%); color: #fff; text-align: center; padding: 80px 20px 90px; }
+.sub-hero.teal { background: linear-gradient(180deg, #2f5367 0%, #24455a 100%); }
+.sub-hero h1 { font-size: 2.3rem; font-weight: 700; }
+.sub-hero p { font-size: .95rem; margin-top: 14px; }
+
+/* ---------- Services rows ---------- */
+.svc { padding: 38px 0 50px; background: linear-gradient(180deg, #1c2b47 0%, #2d3f5f 100%); color: #fff; }
+.svc .row { display: grid; grid-template-columns: 1fr 1.2fr; gap: 36px; align-items: center; max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+.svc.rev .row { grid-template-columns: 1.2fr 1fr; }
+.svc img { width: 100%; max-height: 310px; object-fit: cover; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.4); }
+.svc h2 { font-size: 2rem; margin-bottom: 12px; }
+.svc p { font-size: .95rem; margin-bottom: 18px; max-width: 620px; }
+
+/* ---------- About ---------- */
+.story { display: grid; grid-template-columns: 1.05fr 1fr; gap: 40px; align-items: start; padding: 56px 20px 70px; max-width: 1280px; margin: 0 auto; }
+.story h1 { font-size: 2.2rem; color: #0f4c5c; font-weight: 700; margin-bottom: 4px; }
+.story p { font-size: 1rem; line-height: 1.5; margin-bottom: 20px; color: #222; }
+.story img { width: 100%; border-radius: 6px; box-shadow: 0 6px 18px rgba(0,0,0,.25); margin-top: 26px; }
+.mv-band { background: #dff1f5; padding: 0 14px 50px; }
+.mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 1280px; margin: 0 auto; }
+.mv-card { background: #fff; padding: 30px 30px 40px; display: flex; gap: 22px; align-items: flex-start; margin-top: -0px; }
+.mv-card img { width: 80px; flex: none; }
+.mv-card h3 { font-size: 1.35rem; color: #0f3d52; margin-bottom: 8px; }
+.mv-card p { font-size: .95rem; line-height: 1.5; color: #222; }
+
+/* ---------- Careers ---------- */
+.careers { background: #02062a; padding: 80px 24px 100px; min-height: 720px; }
+.careers-card { max-width: 956px; margin: 0 auto; background: #12122e; border: 2px solid #3b3b5f; border-radius: 24px; padding: 62px 62px 68px; }
+.careers .eyebrow { font-family: "Montserrat", sans-serif; font-size: 1rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #fff; }
+.careers h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.18; color: #fff; margin: 14px 0 22px; }
+.careers p { font-family: Georgia, "Times New Roman", serif; font-size: 1.1rem; color: #8392b5; }
+.apply { display: inline-block; margin-top: 40px; background: #fff; color: #000; font-family: "Montserrat", sans-serif; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; padding: 22px 38px; border-radius: 4px; font-size: .95rem; }
+.apply:hover { background: #dfe6f5; }
+
+/* ---------- Blog ---------- */
+.blog { max-width: 810px; margin: 0 auto; padding: 72px 20px 30px; }
+.post { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 32px; }
+.post .txt { flex: 1; }
+.post h2 { font-size: 1.75rem; font-weight: 700; line-height: 1.2; color: #0a0f2a; margin-bottom: 8px; }
+.post .excerpt { font-size: .9rem; color: #333; line-height: 1.4; }
+.post .excerpt a { color: var(--link-blue); }
+.post .cat { font-size: .85rem; color: #4a86b5; margin-top: 10px; }
+.post .date { font-size: .85rem; color: #6b7280; margin-top: 6px; }
+.post img { width: 192px; height: 192px; object-fit: cover; flex: none; }
+.more-wrap { text-align: center; margin: 30px 0 110px; }
+.more-btn { display: inline-block; background: var(--link-blue); color: #fff; border-radius: 30px; padding: 7px 36px; font-size: .95rem; }
+.more-btn:hover { filter: brightness(.9); }
+
+/* ---------- Contact / booking ---------- */
+.booking { max-width: 950px; margin: 90px auto; border: 1px solid #e3e6ea; border-radius: 8px; box-shadow: 0 1px 6px rgba(0,0,0,.06); overflow: hidden; }
+.booking-fallback { padding: 60px 30px; text-align: center; }
+.booking-fallback h2 { font-size: 1.7rem; color: #0f3d52; margin-bottom: 10px; }
+.booking-fallback p { color: #444; max-width: 520px; margin: 0 auto 26px; }
+.booking-fallback .btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.booking-fallback .pill { padding: 12px 30px; font-size: .95rem; background: var(--link-blue); }
+.booking-fallback .pill:hover { filter: brightness(.9); }
+.contact-line { border-top: 2px solid #111; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--footer); color: #fff; border-top: 1px solid #2a2f55; }
+.foot-wrap { display: flex; align-items: flex-start; padding: 26px 20px 38px; gap: 0; }
+.foot-col:first-child { width: 326px; }
+.foot-col h4 { font-size: 1.35rem; font-weight: 400; margin-bottom: 12px; }
+.foot-col ul { list-style: none; }
+.foot-col li { font-weight: 700; font-size: .95rem; margin-bottom: 14px; }
+.foot-col:first-child li { padding-left: 5px; }
+.foot-col li i { margin-right: 8px; }
+.foot-col a:hover { color: var(--teal); }
+.foot-social { margin-left: auto; display: flex; gap: 52px; align-self: center; padding-right: 36px; font-size: 1.4rem; }
+.foot-social a:hover { color: var(--teal); }
+.copy { border-top: 1px solid #2a2f55; padding: 28px 20px 40px; font-size: .9rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 860px) {
+  .nav { flex-direction: column; height: auto; padding: 12px 16px; gap: 8px; }
+  .nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .hm-hero h1 { font-size: 2rem; }
+  .hm-btns { grid-template-columns: 1fr; }
+  .hm-btn { font-size: 1.3rem; }
+  .hm-split { grid-template-columns: 1fr; }
+  .hm-split .txt { padding: 32px 24px; }
+  .hm-how h2, .hm-testi h2 { font-size: 2.1rem; }
+  .hm-faq h2 { font-size: 2.2rem; }
+  .hm-how .sub, .hm-faq .sub { font-size: 1.15rem; }
+  .hm-icons, .hm-quotes, .hm-qa { grid-template-columns: 1fr; }
+  .hm-cards { grid-template-columns: 1fr; }
+  .hm-card, .hm-card.wide { grid-column: span 1; }
+  .hm-card.wide img { height: 240px; }
+  .svc .row, .svc.rev .row, .story, .mv-grid { grid-template-columns: 1fr; }
+  .svc.rev .row .txt { order: 2; }
+  .careers-card { padding: 36px 26px 44px; }
+  .careers h1 { font-size: 2.3rem; }
+  .post { flex-direction: column-reverse; }
+  .post img { width: 100%; height: 220px; }
+  .foot-wrap { flex-direction: column; gap: 20px; }
+  .foot-col:first-child { width: auto; }
+  .foot-social { margin: 0; gap: 30px; padding: 0; }
+}
